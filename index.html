@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Investigation Room</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">🔎 AI Investigation Room</div>
+    <div class="status"><span></span> Investigation System Online</div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">AI AUTOMATION PLATFORM</p>
+        <h1>Investigate smarter. <span>Decide faster.</span></h1>
+        <p class="subtitle">Enter a case and let the investigation workspace organize clues, suspects, evidence and next actions.</p>
+      </div>
+      <div class="hero-icon">🕵️</div>
+    </section>
+
+    <section class="workspace">
+      <div class="panel input-panel">
+        <div class="panel-title">
+          <div><span class="icon">📋</span><h2>Case Brief</h2></div>
+          <span class="badge">INPUT</span>
+        </div>
+        <label for="caseInput">Describe the case</label>
+        <textarea id="caseInput" placeholder="Example: A laptop disappeared from the college lab between 2 PM and 3 PM. Three people had access..."></textarea>
+        <button id="investigateBtn">⚡ Run AI Investigation</button>
+        <p class="hint">Demo mode: analysis is generated locally in your browser.</p>
+      </div>
+
+      <div class="panel">
+        <div class="panel-title">
+          <div><span class="icon">🧠</span><h2>AI Analysis</h2></div>
+          <span id="confidence" class="badge muted">WAITING</span>
+        </div>
+        <div id="analysis" class="empty">
+          <div class="empty-icon">🔍</div>
+          <p>Submit a case to generate an investigation.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid">
+      <div class="panel">
+        <div class="panel-title"><div><span class="icon">🧩</span><h2>Evidence</h2></div></div>
+        <div id="evidence" class="cards empty-small">No evidence extracted yet.</div>
+      </div>
+      <div class="panel">
+        <div class="panel-title"><div><span class="icon">👥</span><h2>Persons of Interest</h2></div></div>
+        <div id="suspects" class="cards empty-small">No persons identified yet.</div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-title"><div><span class="icon">⏱️</span><h2>Investigation Timeline</h2></div></div>
+      <div id="timeline" class="timeline empty-small">Run an investigation to build the timeline.</div>
+    </section>
+
+    <section class="panel next-panel">
+      <div class="panel-title"><div><span class="icon">🚀</span><h2>Recommended Next Actions</h2></div></div>
+      <div id="actions" class="actions empty-small">Recommendations will appear here.</div>
+    </section>
+  </main>
+
+  <footer>Built as an AI Automation Platform workshop project • AI Investigation Room</footer>
+  <script src="script.js"></script>
+</body>
+</html>
